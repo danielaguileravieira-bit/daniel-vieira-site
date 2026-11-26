@@ -159,3 +159,11 @@ a { color: inherit; text-decoration: none; }
   .training-intro h1 { font-size:47px; }
   .training-section-heading h2 { font-size:22px; }
 }
+
+.featured-course-copy .featured-course-subtitle { margin-top:0; color:rgba(255,255,255,.82); font-size:14px; }
+.featured-course-copy .featured-course-description { max-width:560px; margin-top:17px; color:rgba(255,255,255,.72); font-size:13px; line-height:1.75; }
+.featured-course-copy .featured-course-promise { margin-top:16px; color:#e5c779; font-size:12px; font-weight:700; line-height:1.6; letter-spacing:.35px; }
+@media (max-width:760px) {
+  .featured-course-copy .featured-course-description { font-size:12px; }
+  .featured-course-copy .featured-course-promise { font-size:11px; }
+}
