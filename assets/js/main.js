@@ -2,23 +2,9 @@
 const yearElement = document.querySelector("[data-current-year]");
 if (yearElement) yearElement.textContent = new Date().getFullYear();
 
-// Menu acessível para telas menores.
-const menuToggle = document.querySelector(".menu-toggle");
-const navigation = document.querySelector("#primary-navigation");
-
-if (menuToggle && navigation) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!isOpen));
-    menuToggle.setAttribute("aria-label", isOpen ? "Abrir menu" : "Fechar menu");
-    navigation.classList.toggle("is-open", !isOpen);
+// Pequeno feedback de navegação para os cards enquanto os destinos individuais são definidos.
+document.querySelectorAll(".path-card").forEach((card) => {
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") card.classList.add("is-activated");
   });
-
-  navigation.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Abrir menu");
-      navigation.classList.remove("is-open");
-    });
-  });
-}
+});
