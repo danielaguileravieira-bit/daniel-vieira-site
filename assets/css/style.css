@@ -50,13 +50,15 @@ a { color: inherit; text-decoration: none; }
 .card-copy strong { font: 700 clamp(27px, 3vw, 43px)/1.05 var(--display); letter-spacing: .01em; }
 .card-copy strong span { color: var(--accent); }
 .card-copy small { margin-top: 5px; font-size: 10px; line-height: 1.5; color: rgba(255,255,255,.85); }
+.card-cta { display: inline-flex; align-items: center; margin-top: 10px; padding: 7px 11px; border: 1px solid rgba(255,255,255,.75); color: #fff; font-size: 8px; font-weight: 700; letter-spacing: 1px; transition: background .2s ease, color .2s ease; }
+.path-card:hover .card-cta { background: #fff; color: var(--ink); }
 .card-arrow { position: absolute; left: calc(100% + 35px); bottom: 0; width: 35px; height: 35px; border-radius: 50%; display: grid; place-items: center; background: white; color: var(--ink); font-size: 19px; transition: transform .2s ease; }
 .path-card:hover .card-arrow { transform: translate(3px,-3px); }
 .card-art { position: absolute; z-index: 0; right: 4%; top: 50%; transform: translateY(-50%); pointer-events: none; }
 .card-mentoria::before { background: linear-gradient(100deg, #15191a 0%, #233c3a 58%, #10201e 100%); }
 .art-mentoria { color: rgba(255,255,255,.1); font: 700 clamp(100px, 13vw, 175px)/1 var(--display); letter-spacing: -.08em; }
-.card-palestras::before { background: linear-gradient(100deg, #b92f27 0%, #d84a3c 55%, #65241f 100%); }
-.art-palestras { right: 5%; color: rgba(255,255,255,.16); font: 700 clamp(24px, 3.2vw, 42px)/.95 var(--display); text-align: right; letter-spacing: .02em; }
+.card-treinamentos::before { background: linear-gradient(100deg, #b92f27 0%, #d84a3c 55%, #65241f 100%); }
+.art-treinamentos { right: 5%; color: rgba(255,255,255,.16); font: 700 clamp(24px, 3.2vw, 42px)/.95 var(--display); text-align: right; letter-spacing: .02em; }
 .card-livro::before { background: linear-gradient(100deg, #171719 0%, #343239 60%, #111215 100%); }
 .art-livro { right: 6%; color: rgba(255,255,255,.17); font: 600 clamp(34px, 4.2vw, 58px)/.95 var(--display); transform: translateY(-50%) rotate(-7deg); letter-spacing: -.03em; }
 .card-axis::before { background: linear-gradient(100deg, #101d43 0%, #1c3478 58%, #111d45 100%); }
@@ -89,7 +91,7 @@ a { color: inherit; text-decoration: none; }
   .card-copy { max-width: 78%; }
   .card-copy strong { font-size: 39px; }
   .art-mentoria { font-size: 135px; }
-  .art-palestras { font-size: 36px; }
+  .art-treinamentos { font-size: 36px; }
   .art-livro { font-size: 48px; }
   .art-axis { font-size: 95px; }
   .pathways-footer { flex-wrap: wrap; padding-top: 22px; }
